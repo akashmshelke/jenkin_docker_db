@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # remove the container if exists or running 
-if [ $(docker container ls -q --filter name=my_db_container) != '' ]; then
+if [ $(docker container ls -q -a --filter name=my_db_container) != '' ]; then
     docker container stop my_db_container
     docker container rm my_db_container
 fi
