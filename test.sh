@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # remove the container if exists or running 
 if [ $(docker container ls -q -a --filter name=my_db_container) != '' ]; then
     docker container stop my_db_container
@@ -15,4 +16,4 @@ fi
 docker build -t my_db .
 
 # start the container
-docker run -itd -p 3007:3306 --name my_db_container my_db
+docker run -itd -p 8888:80 --name my_db_container my_db
