@@ -17,5 +17,3 @@ docker build -t my_db .
 # start the container
 docker run -itd -p 3307:3306 --name my_db_container my_db
 
-# Due lost connection error
-docker restart my_db_container
